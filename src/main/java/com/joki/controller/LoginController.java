@@ -14,7 +14,6 @@ public class LoginController implements Initializable {
     @FXML
     private Label lblPrueba;
 
-
     private Application application;
     private Stage stage;
 

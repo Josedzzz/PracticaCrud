@@ -18,7 +18,6 @@ public class Application extends javafx.application.Application {
     }
 
     private void mostrarVentanaPrincipal() {
-
         try{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Application.class.getResource("/com/joki/view/LoginView.fxml"));
@@ -31,7 +30,6 @@ public class Application extends javafx.application.Application {
             primaryStage.show();
             LoginController controller = loader.getController();
             controller.setStage(primaryStage);
-
         }catch(Exception e){
 
         }
