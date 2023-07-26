@@ -36,6 +36,20 @@ public class ModelFactoryController {
         banco = new Banco("Joji");
         //Inicializar datos de empleados y clientes
         Empleado empleado1 = new Empleado("Camilo", "Albaran", "123", "Dark", "123");
+        banco.getListaEmpleados().add(empleado1);
         Cliente cliente1 = new Cliente("Jose", "Amaya", "777");
+        banco.getListaClientes().add(cliente1);
+    }
+
+    //------------------------------------ VIEW LOGIN ----------------------------------------------------
+
+    /**
+     *
+     * @param usuario
+     * @param contrasenia
+     * @return
+     */
+    public Empleado darEmpleadoLogin(String usuario, String contrasenia) {
+        return banco.darEmpleadoLogin(usuario, contrasenia);
     }
 }

@@ -41,4 +41,22 @@ public class Banco {
     public void setListaClientes(List<Cliente> listaClientes) {
         this.listaClientes = listaClientes;
     }
+
+    //------------------------------ VIEW LOGIN ----------------------------------------------------------
+
+    /**
+     * Retorna el empleado dado el usuario y la contrasenia
+     * @param usuario
+     * @param contrasenia
+     * @return
+     */
+    public Empleado darEmpleadoLogin(String usuario, String contrasenia) {
+        Empleado empleadoEncontrado = null;
+        for(Empleado empleado : listaEmpleados) {
+            if(empleado.getUsuario().equals(usuario) && empleado.getContrasenia().equals(contrasenia)) {
+                empleadoEncontrado = empleado;
+            }
+        }
+        return empleadoEncontrado;
+    }
 }
