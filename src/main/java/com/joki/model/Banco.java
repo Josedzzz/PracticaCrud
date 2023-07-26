@@ -8,7 +8,7 @@ public class Banco {
     private List<Empleado> listaEmpleados;
     private List<Cliente> listaClientes;
 
-    public Banco(String nombre, List<Empleado> listaEmpleados, List<Cliente> listaClientes) {
+    public Banco(String nombre) {
         this.nombre = nombre;
         this.listaEmpleados = new ArrayList<Empleado>();
         this.listaClientes = new ArrayList<Cliente>();
