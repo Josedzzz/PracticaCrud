@@ -1,6 +1,6 @@
 package com.joki.application;
 
-import com.joki.controller.VentanaPrincipalController;
+import com.joki.controller.LoginController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -21,15 +21,15 @@ public class Application extends javafx.application.Application {
 
         try{
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Application.class.getResource("/com/joki/view/VentanaPrincipalView.fxml"));
+            loader.setLocation(Application.class.getResource("/com/joki/view/LoginView.fxml"));
             BorderPane borderPane = (BorderPane) loader.load();
-            VentanaPrincipalController ventanaPrincipalController = loader.getController();
+            LoginController ventanaPrincipalController = loader.getController();
             ventanaPrincipalController.setApplication(this);
 
             Scene scene = new Scene(borderPane);
             primaryStage.setScene(scene);
             primaryStage.show();
-            VentanaPrincipalController controller = loader.getController();
+            LoginController controller = loader.getController();
             controller.setStage(primaryStage);
 
         }catch(Exception e){
