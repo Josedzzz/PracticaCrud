@@ -5,6 +5,7 @@ import com.joki.model.Cliente;
 import com.joki.model.Empleado;
 
 import java.lang.module.Configuration;
+import java.util.List;
 
 public class ModelFactoryController {
     Banco banco = null;
@@ -37,7 +38,7 @@ public class ModelFactoryController {
         //Inicializar datos de empleados y clientes
         Empleado empleado1 = new Empleado("Camilo", "Albaran", "123", "Dark", "123");
         banco.getListaEmpleados().add(empleado1);
-        Cliente cliente1 = new Cliente("Jose", "Amaya", "777");
+        Cliente cliente1 = new Cliente("Jose", "Amaya", "777", empleado1);
         banco.getListaClientes().add(cliente1);
     }
 
@@ -51,5 +52,15 @@ public class ModelFactoryController {
      */
     public Empleado darEmpleadoLogin(String usuario, String contrasenia) {
         return banco.darEmpleadoLogin(usuario, contrasenia);
+    }
+
+    //------------------------------------ MANEJO CLIENTES ------------------------------------------------------
+
+    /**
+     * Retorna la lista de clientes
+     * @return
+     */
+    public List<Cliente> getListaClientes() {
+        return banco.getListaClientes();
     }
 }
